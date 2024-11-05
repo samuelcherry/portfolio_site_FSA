@@ -7,3 +7,24 @@ a {
   text-decoration: none;
   font-weight: 700;
 }
+
+.navBar {
+  display: block;
+  background-color: rgb(129, 129, 216);
+  margin: 5px;
+}
+
+.navBar a {
+  margin: 5px;
+  padding-top: 10px;
+  color: white;
+}
+
+h2 {
+  font-size: medium;
+}
+
+.Dipper {
+  height: 100px;
+  transform: rotate(270deg);
+}
