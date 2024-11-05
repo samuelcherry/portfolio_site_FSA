@@ -28,3 +28,7 @@ h2 {
   height: 100px;
   transform: rotate(270deg);
 }
+img {
+  width: 150px;
+  height: auto;
+}
