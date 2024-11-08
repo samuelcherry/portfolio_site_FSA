@@ -1,5 +1,68 @@
-html * {
+* {
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5 1fr);
+  grid-template-rows: repeat(4 1fr);
+  grid-template-areas:
+    "header header header header header"
+    "sidebar main main main main"
+    "sidebar main main main main"
+    "footer footer footer footer footer";
+}
+
+.header,
+.sidebar,
+.main,
+.footer {
+  padding: 10px;
+}
+
+.header {
+  grid-area: header;
+  background-color: lightblue;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: lightgray;
+}
+
+.sidebar h1 {
+  font-size: 15px;
+  text-align: center;
+}
+.sidebar img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.sidebar p {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.sidebar a {
+  color: black;
+}
+
+.main {
+  grid-area: main;
+  background-color: lightyellow;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: lightcoral;
+}
+
+.footer input {
+  justify-items: center;
 }
 
 a {
@@ -9,14 +72,12 @@ a {
 }
 
 .navBar {
-  display: block;
+  display: flex;
   background-color: rgb(129, 129, 216);
-  margin: 5px;
 }
 
 .navBar a {
   margin: 5px;
-  padding-top: 10px;
   color: white;
 }
 
@@ -25,10 +86,17 @@ h2 {
 }
 
 .Dipper {
+  padding: 25px;
   height: 100px;
   transform: rotate(270deg);
 }
 img {
   width: 150px;
-  height: auto;
+  margin-left: 200px;
+}
+/* added media query */
+@media (max-width: 500px) {
+  .sidebar {
+    display: none;
+  }
 }
